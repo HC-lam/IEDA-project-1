@@ -1,0 +1,40 @@
+{
+  "portfolio": {
+    "final_value": 1179459.046372,
+    "final_return_pct": 17.945904637200005,
+    "max_drawdown_pct": -20.131518194133015,
+    "sharpe": 0.409272892676171,
+    "tail_loss_pct": -1.7885780412046137
+  },
+  "hsi": {
+    "final_value": 1387518.2788269385,
+    "final_return_pct": 38.751827882693846,
+    "max_drawdown_pct": -19.9540271461063,
+    "sharpe": 0.6308812652433347,
+    "tail_loss_pct": -1.9554618393871848
+  },
+  "hedge": {
+    "min_target_pct": 5.0,
+    "min_daily_hedge_weight_pct": 5.042698525377596,
+    "days_hedge_below_10pct": 0
+  },
+  "correlation": {
+    "note": "portfolio |60d corr to HSI| constraint removed per user request",
+    "reported_max_abs_60d_corr": 0.9072035610692669
+  },
+  "trades": {
+    "count": 429,
+    "buy_count": 213,
+    "sell_count": 213,
+    "option_count": 24,
+    "stock_trades": 303,
+    "commodity_trades": 102,
+    "realized_pnl_total": 219269.32899999982,
+    "realized_pnl_count": 216
+  },
+  "notes": {
+    "option_model": "stylized protective put on the stock sleeve (premium 1.5%/mo, strike 95%); no option market data in repository - model only",
+    "hedge_min_pct": 5.0,
+    "data": "gold/silver/oil closes from Commodities_close_2023-01-01_to_2026-10-31_wide.csv"
+  }
+}
