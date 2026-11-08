@@ -17,7 +17,7 @@ fill variant (see Section 8: the intraday OHLC long file is canceled).
 
 ## 1. User, task, and supported scope
 
-**Intended user.** A quantitative / research user who wants to test rule-based
+**retail investor.** A quantitative / research user who wants to test rule-based
 HK stock selection with a hedged, monthly-rebalanced portfolio and compare it
 against HSI. This is a research backtest, **not** a live trading system.
 
