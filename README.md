@@ -84,16 +84,11 @@ Notes:
 
 Default (2021–2022):
 
-```bash
-python3 /Users/hoddychan/Documents/JiuwenSwarm/2026-11-08/chat-1/work/plan_v2.py
-```
-
 Other windows (the script intentionally has no CLI; override constants via an
 inline import — this is the exact command used):
 
 ```bash
 # 2022-2023 (in-memory merge; 2021 warm-up)
-cd /Users/hoddychan/Documents/JiuwenSwarm/2026-11-08/chat-1/work && python3 - <<'PY'
 import plan_v2
 plan_v2.START = "2022-01-03"
 plan_v2.END   = "2023-12-29"
@@ -101,7 +96,6 @@ plan_v2.main()
 PY
 
 # 2024-2026
-cd /Users/hoddychan/Documents/JiuwenSwarm/2026-11-08/chat-1/work && python3 - <<'PY'
 import os, plan_v2
 plan_v2.REPO     = "/Users/hoddychan/Documents/JiuwenSwarm/2026-11-08"
 plan_v2.START    = "2024-01-02"
@@ -112,9 +106,6 @@ plan_v2.COM_CSV  = os.path.join(plan_v2.REPO, "Commodities_close_2023-01-01_to_2
 plan_v2.main()
 PY
 ```
-
-No skill invocation needed. Runtime: a few seconds per window.
-
 ---
 
 ## 5. One small example and its expected checks
