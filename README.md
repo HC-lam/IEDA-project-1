@@ -48,12 +48,6 @@ modeled 0.11%, dividends, taxes, corporate actions / splits, other markets.
 ---
 
 ## 3. Input files / fields, units, sources, data-access instructions
-
-Two data sets are used (uploaded by the user):
-
-```
-2021-2022 files: /Users/hoddychan/Documents/JiuwenSwarm/2026-11-07/chat-1/outputs
-2023-2026 files: /Users/hoddychan/Documents/JiuwenSwarm/2026-11-08
 ```
 
 | File | Columns used | Units | Role |
