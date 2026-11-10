@@ -160,12 +160,9 @@ Expected checks after a run:
 
 ## 6. Output files and what they mean
 
-**Currently: none.** The v3 script intentionally prints a console summary only.
-Full deliverables (per window) are planned once approved:
-
 | Planned file | Meaning |
 |---|---|
-| `tables/<window>_trades.csv` | Every buy/sell/option event with price, amount, cost, reason, P&L |
+| `` | Every buy/sell/option event with price, amount, cost, reason, P&L |
 | `tables/<window>_monthly.csv` | Monthly rebalance rows (date, regime, target weights, holdings, NAV) |
 | `tables/<window>_nav.csv` | Daily NAV (portfolio vs HSI, normalized to 1,000,000) |
 | `tables/<window>_metrics.json` | Return, drawdown, Sharpe, tail loss, trade counts, costs |
