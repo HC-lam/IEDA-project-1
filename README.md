@@ -1,21 +1,12 @@
-# plan_v2.py — Latest Adjusted HK Portfolio (v3 rules) — Quick Run
-
-A self-contained, pure-stdlib Python backtest of an adjusted HK equity portfolio.
-This is the **latest version** of the enhanced plan (`enhance_plan.py`) with the
-user's final rule set (2026-11-09, "v3"). By default it **prints an approximate
-summary only and creates no output files**; full output files (CSV/JSON/xlsx/charts)
-are intentionally left for after explicit approval.
-
-Created **2026-11-09** at the user's request. Evolved from `enhance_plan.py`
-(5-enhancement variant, 2026-11-08).
+# plan_v2.py — Latest Adjusted HK Portfolio (v3 rules) 
 
 ---
 
 ## 1. User, task, and supported scope
 
-**Intended user.** A quantitative / research user testing a momentum-based HK
+**Retail investor.** A quantitative / research user testing a momentum-based HK
 stock portfolio with commodity hedging and a stylized protective put, compared
-against HSI. Research backtest, **not** a live trading system.
+against HSI. 
 
 **Task — the v3 rules (as requested):**
 
@@ -208,13 +199,11 @@ Full deliverables (per window) are planned once approved:
 * **Stylized put** — constant premium, modeled payoff (strike = 95% of sleeve at
   month start, settled at next rebalance including intra-month sleeve flows);
   no market quotes. If all stocks exit mid-month the payoff only covers actual
-  sleeve loss (flow-adjusted).
-* **MAX_HEDGE = 2 is an assumption** (user said "limit the number of hedge
-  holdings" without a number) — say the word to change it.
+  sleeve loss (flow-adjusted)
 * **Indicator warm-up**: with the 2022–2023 window, 2021 is warm-up; with
   2024–2026, 2023 is warm-up. If a window started at the very first data row,
   the first ~60 trading days would have no stock candidates.
-* No transaction costs beyond 0.11%/side (modeled), no dividends/taxes/splits.
+* Transaction costs is fixed at 0.11%/side (modeled), no dividends/taxes/splits.
 * Momentum/regime signals use only closes; results are sensitive to the specific
   CSV universe and window (e.g., +47% in 2024–2026 vs -19.7% in 2022–2023).
 
@@ -229,11 +218,9 @@ Full deliverables (per window) are planned once approved:
   changes; the earlier README (`README.md`) documents `enhance_plan.py`.
 * **Input data**: CSVs uploaded by the user on 2026-11-09 (2021–2022 set in
   `2026-11-07/chat-1/outputs`, 2023–2026 set in `2026-11-08`).
-* **AI assistance**: script, rule implementation and this README were produced
-  with AI (agent) assistance in a JiuwenSwarm/openJiuwen agent environment at
-  the user's request; the strategy rules were specified by the user.
+* **AI assistance**: script, rule implementation 
 * **License**: no explicit license; treat as all-rights-reserved unless the
-  owner publishes one. The openJiuwen platform is Apache-2.0.
+  owner publishes one.
 
 ---
 
