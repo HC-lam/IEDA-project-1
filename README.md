@@ -35,7 +35,7 @@ and a take-profit level. With same trading skill
 * Stop-loss and take-profit levels.
 * Maximum number of stock names held; hedge holdings capped at 2.
 
-For the default (v3) profile implemented in `plan_v2.py`:
+For the default (v2) profile implemented in `plan_v2.py`:
 
 * Max **10 stocks**; hedge holdings capped at **2** (MAX_HEDGE = 2).
 * A stock exits on **-15% stop** → own **downtrend** (close < SMA20 & DIF < -0.1)
@@ -71,14 +71,7 @@ modeled 0.11%, dividends, taxes, corporate actions / splits, other markets.
 
 ## 3. Input files / fields, units, sources, data-access instructions
 
-Two data sets are used (uploaded by the user). Paths are relative to the folder
-that contains this README (`<project_root>/2026-11-08/chat-1/work`); they are also
-configured via the `REPO*` constants at the top of the script:
-
-```
-2021-2022 files: ../../2026-11-07/chat-1/outputs   (REPO_OLD)
-2023-2026 files: ../..                              (REPO_NEW = <project_root>/2026-11-08)
-```
+Two data sets are used.
 
 | File | Columns used | Units | Role |
 |---|---|---|---|
@@ -96,11 +89,10 @@ Notes:
   `HSI_daily_2023-01-01_to_2026-10-31.csv`,
   `HK_stocks_close_2023-01-01_to_2026-10-31_wide.csv`,
   `Commodities_close_2023-01-01_to_2026-10-31_wide.csv`.
-* There is **no intraday OHLC long file** — stops/targets use close-based fills.
 * Both wide files share the same 79 ticker columns (verified), so the 2022–2023
   merge is safe. The HSI file drives the master calendar; the wide stock file is
   row-aligned with it; commodity dates are aligned by date string.
-* The script only ever **reads** the CSVs; it never modifies them.
+* The script only ever reads the CSVs; it never modifies them.
 
 ---
 
@@ -139,8 +131,6 @@ plan_v2.COM_CSV  = os.path.join(plan_v2.REPO, "Commodities_close_2023-01-01_to_2
 plan_v2.main()
 PY
 ```
-
-No skill invocation needed. Runtime: a few seconds per window.
 
 ---
 
