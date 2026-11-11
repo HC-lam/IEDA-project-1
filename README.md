@@ -1,9 +1,7 @@
-# plan_v2.py — Risk-Profile HK Portfolio Backtest (retail investor)
-
 A self-contained, pure-stdlib Python backtest of an adjusted HK equity portfolio.
-It is built to **give investors with different risk-tolerance levels a relative
-allocation of assets, a stop-loss level, and a take-profit level**. The **trading
-skill (entry/exit signals) is provided by the user**; the script applies that
+It is built to give investors with different risk-tolerance levels a relative
+allocation of assets, a stop-loss level, and a take-profit level. The trading
+skill (entry/exit signals) is provided by the user; the script applies that
 skill consistently across risk profiles.
 
 `plan_v2.py` itself is the **quick-run** variant of the v3 rule set: by default it
