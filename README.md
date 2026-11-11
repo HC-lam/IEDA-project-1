@@ -1,8 +1,6 @@
 A self-contained, pure-stdlib Python backtest of an adjusted HK equity portfolio.
 It is built to give investors with different risk-tolerance levels a relative
-allocation of assets, a stop-loss level, and a take-profit level. The trading
-skill (entry/exit signals) is provided by the user; the script applies that
-skill consistently across risk profiles.
+allocation of assets, a stop-loss level, and a take-profit level.
 
 `plan_v2.py` itself is the **quick-run** variant of the v3 rule set: by default it
 **prints an approximate console summary only and creates no output files**. Full
@@ -10,21 +8,16 @@ deliverables (CSV/JSON/xlsx/charts) are generated per window by the risk-profile
 runner variants (`plan_ra.py` risk-averse, `plan_rt.py` risk-taker,
 `plan_rn.py` risk-neutral).
 
-Created **2026-11-09** at the user's request. Evolved from `enhance_plan.py`
-(5-enhancement variant, 2026-11-08).
-
 ---
 
 ## 1. User, task, and supported scope
 
 **Intended user.** A retail investor who wants portfolios matched to different
-risk-tolerance levels. Research backtest, **not** a live trading system.
+risk-tolerance levels. Research backtest, not a live trading system.
 
 **Task.** Give different investors — with different risk-tolerance levels — a
 relative allocation of assets (stock / hedge / cash sleeves), a stop-loss level,
-and a take-profit level. The **trading skill is provided by the user** and is
-applied identically by every risk profile; only the allocation and the
-stop/target levels change between profiles.
+and a take-profit level. With same trading skill
 
 **Trading skill (provided by the user):**
 
