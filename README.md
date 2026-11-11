@@ -188,8 +188,71 @@ generate the full deliverables below, per window:
 | `tables/<window>_nav.csv` | Daily NAV (portfolio vs HSI, normalized to 1,000,000) |
 | `tables/<window>_metrics.json` | Return, drawdown, Sharpe, tail loss, trade counts, costs |
 | `charts/…comparison.svg / timeline.svg / allocation.svg` | Portfolio vs HSI; trade timeline; allocation |
-| `<window>_plan.xlsx` | 3 sheets (Trades, Monthly Allocation, Metrics) |
+| `tables/<window>_plan.xlsx` | 3 sheets (Trades, Monthly Allocation, Metrics) |
 
+* Files for plan_v2(2022-2023):
+  `plan_v2/2022-2023_trades.csv`,
+  `plan_v2/2022-2023_monthly.csv`,
+  `plan_v2/2022_2023_nav.csv`,
+  `plan_v2/2022_2023_metrics.json`,
+  `plan_v2/2022-2023/comparison.svg / timeline.svg / allocation.svg`
+  `plan_v2/2022_2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_v2/2024-2026_trades.csv`,
+  `plan_v2/2024-2026_monthly.csv`,
+  `plan_v2/2024-2026_nav.csv`,
+  `plan_v2/2024-2026_metrics.json`,
+  `plan_v2/2024-2026/comparison.svg / timeline.svg / allocation.svg`
+  `plan_v2/2024-2026_plan.xlsx`.
+  
+* Files for risk adverse(2022-2023):
+  `plan_ra/2022-2023_trades.csv`,
+  `plan_ra/2022-2023_monthly.csv`,
+  `plan_ra/2022_2023_nav.csv`,
+  `plan_ra/2022_2023_metrics.json`,
+  `plan_ra/2022-2023/comparison.svg / timeline.svg / allocation.svg`
+  `plan_ra/2022_2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_ra/2024-2026_trades.csv`,
+  `plan_ra/2024-2026_monthly.csv`,
+  `plan_ra/2024-2026_nav.csv`,
+  `plan_ra/2024-2026_metrics.json`,
+  `plan_ra/2024-2026/comparison.svg / timeline.svg / allocation.svg`
+  `plan_ra/2024-2026_plan.xlsx`.
+
+* Files for risk neutral(2022-2023):
+  `plan_rn/2022-2023_trades.csv`,
+  `plan_rn/2022-2023_monthly.csv`,
+  `plan_rn/2022_2023_nav.csv`,
+  `plan_rn/2022_2023_metrics.json`,
+  `plan_rn/2022-2023/comparison.svg / timeline.svg / allocation.svg`
+  `plan_rn/2022_2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_rn/2024-2026_trades.csv`,
+  `plan_rn/2024-2026_monthly.csv`,
+  `plan_rn/2024-2026_nav.csv`,
+  `plan_rn/2024-2026_metrics.json`,
+  `plan_rn/2024-2026/comparison.svg / timeline.svg / allocation.svg`
+  `plan_rn/2024-2026_plan.xlsx`.
+
+* Files for risk takers(2022-2023):
+  `plan_rt/2022-2023_trades.csv`,
+  `plan_rt/2022-2023_monthly.csv`,
+  `plan_rt/2022_2023_nav.csv`,
+  `plan_rt/2022_2023_metrics.json`,
+  `plan_rt/2022-2023/comparison.svg / timeline.svg / allocation.svg`
+  `plan_rt/2022_2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_rt/2024-2026_trades.csv`,
+  `plan_rt/2024-2026_monthly.csv`,
+  `plan_rt/2024-2026_nav.csv`,
+  `plan_rt/2024-2026_metrics.json`,
+  `plan_rt/2024-2026/comparison.svg / timeline.svg / allocation.svg`
+  `plan_rt/2024-2026_plan.xlsx`.
 ---
 
 ## 7. How to verify / reproduce the important result
@@ -210,22 +273,19 @@ generate the full deliverables below, per window:
   (inline import) or editing the constants at the top of the file.
 * **Paths are configured at the top of the file** — moving the job requires
   editing `REPO*`, `*_CSV`, `START`, `END`.
-* **Close-based fills only** — no intraday OHLC; stops/targets trigger at the
-  daily close, not intraday prices.
 * **2022–2023 uses an in-memory merge** of two CSV sets; requires the same 79
   ticker columns in both wide files (verified) and contiguous dates.
 * **Stylized put** — constant premium, modeled payoff (strike = 95% of sleeve at
   month start, settled at next rebalance including intra-month sleeve flows);
   no market quotes. If all stocks exit mid-month the payoff only covers actual
   sleeve loss (flow-adjusted).
-* **MAX_HEDGE = 2 is a configurable assumption** — it caps the number of hedge
-  holdings per profile.
 * **Indicator warm-up**: with the 2022–2023 window, 2021 is warm-up; with
   2024–2026, 2023 is warm-up. If a window started at the very first data row,
   the first ~60 trading days would have no stock candidates.
-* No transaction costs beyond 0.11%/side (modeled), no dividends/taxes/splits.
+* Transaction costs is fixed 0.11%/side (modeled), no dividends/taxes/splits.
 * Momentum/regime signals use only closes; results are sensitive to the specific
   CSV universe and window (e.g., +47% in 2024–2026 vs -19.7% in 2022–2023).
+* The portfolio is not useful for risk neutral investor. 
 
 **Disclaimer.** Research/educational use only; not investment advice.
 
@@ -238,8 +298,8 @@ generate the full deliverables below, per window:
   changes; the earlier README (`README-v1.md`) documents `enhance_plan.py`.
 * **Input data**: CSVs uploaded by the user (2021–2022 set in
   `2026-11-07/chat-1/outputs`, 2023–2026 set in `2026-11-08`).
-* **AI assistance**: script, rule implementation and this README were produced
-  with AI (agent) assistance in a JiuwenSwarm/openJiuwen agent environment at the
+* **AI assistance**: script, rule implementation with AI (agent) assistance in
+  a JiuwenSwarm/openJiuwen agent environment at the
   user's request; the strategy rules were specified by the user.
 * **License**: no explicit license; treat as all-rights-reserved unless the
   owner publishes one. The openJiuwen platform is Apache-2.0.
@@ -252,6 +312,4 @@ generate the full deliverables below, per window:
 * Flagship public repo (this agent ecosystem): **https://github.com/openJiuwen-ai/jiuwenswarm**
   (Apache-2.0)
 * Official site / docs: **https://openjiuwen.com**
-* **Version**: `plan_v2.py` has no formal version tag — "v3 rules" dated
-  **2026-11-09**. For the public project version, check the `jiuwenswarm`
-  repository's **Releases** page (no pinned release number asserted here).
+* **Version**: `plan_v2.py` has no formal version tag — "v2 rules" dated
