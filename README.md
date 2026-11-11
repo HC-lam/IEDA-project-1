@@ -1,28 +1,59 @@
-# plan_v2.py — Latest Adjusted HK Portfolio (v3 rules) 
+# plan_v2.py — Risk-Profile HK Portfolio Backtest (retail investor)
+
+A self-contained, pure-stdlib Python backtest of an adjusted HK equity portfolio.
+It is built to **give investors with different risk-tolerance levels a relative
+allocation of assets, a stop-loss level, and a take-profit level**. The **trading
+skill (entry/exit signals) is provided by the user**; the script applies that
+skill consistently across risk profiles.
+
+`plan_v2.py` itself is the **quick-run** variant of the v3 rule set: by default it
+**prints an approximate console summary only and creates no output files**. Full
+deliverables (CSV/JSON/xlsx/charts) are generated per window by the risk-profile
+runner variants (`plan_ra.py` risk-averse, `plan_rt.py` risk-taker,
+`plan_rn.py` risk-neutral).
+
+Created **2026-11-09** at the user's request. Evolved from `enhance_plan.py`
+(5-enhancement variant, 2026-11-08).
 
 ---
 
 ## 1. User, task, and supported scope
 
-**Retail investor.** A quantitative / research user testing a momentum-based HK
-stock portfolio with commodity hedging and a stylized protective put, compared
-against HSI. 
+**Intended user.** A retail investor who wants portfolios matched to different
+risk-tolerance levels. Research backtest, **not** a live trading system.
 
-**Task — the v3 rules (as requested):**
+**Task.** Give different investors — with different risk-tolerance levels — a
+relative allocation of assets (stock / hedge / cash sleeves), a stop-loss level,
+and a take-profit level. The **trading skill is provided by the user** and is
+applied identically by every risk profile; only the allocation and the
+stop/target levels change between profiles.
 
-1. Hold **at most 10 stocks**; hedge holdings capped at **2** (MAX_HEDGE = 2).
-2. **Stock downtrend (exit trigger)**: close < SMA(20) **and** MACD line (DIF) < -0.1.
-3. **Hedge regime**: HSI close < SMA(50) **only** — the MACD condition is dropped
+**Trading skill (provided by the user):**
+
+1. **Stock downtrend (exit trigger)**: close < SMA(20) **and** MACD line (DIF) < -0.1.
+2. **Hedge regime**: HSI close < SMA(50) **only** — the MACD condition is dropped
    for hedges, and the **commodity buy filter is dropped**: hedges are bought
    whenever the regime is on (no requirement that Gold/Silver/Oil look bullish).
-4. Held stocks are **not rebalanced monthly**. A stock exits on:
-   **-15% stop** (restored) → own **downtrend** (close < SMA20 & DIF < -0.1) →
-   **+60% target** (priority in that order; close-based fills).
-5. **Transaction cost: 0.11%** of the traded amount on every buy and sell
+3. Held stocks are **not rebalanced monthly**.
+4. **Transaction cost: 0.11%** of the traded amount on every buy and sell
    (stocks & commodities; the stylized put's premium counts as its cost).
-6. Stylized monthly protective put on the stock sleeve, bought in risk-off
-   months (premium 0.40%/month, strike 95%), payoff settled at the next
-   rebalance against the modeled sleeve **including intra-month flows**.
+
+**Per-profile parameters** (set according to the investor's risk tolerance):
+
+* Relative allocation of the stock / hedge / cash sleeves.
+* Stop-loss and take-profit levels.
+* Maximum number of stock names held; hedge holdings capped at 2.
+
+For the default (v3) profile implemented in `plan_v2.py`:
+
+* Max **10 stocks**; hedge holdings capped at **2** (MAX_HEDGE = 2).
+* A stock exits on **-15% stop** → own **downtrend** (close < SMA20 & DIF < -0.1)
+  → **+60% target** (priority in that order; close-based fills).
+* Stylized monthly protective put on the stock sleeve, bought in risk-off months
+  (premium 0.40%/month, strike 95%), payoff settled at the next rebalance against
+  the modeled sleeve **including intra-month flows**.
+* Allocation: **stock 40 / hedge 30 / cash 30** in the HSI downtrend regime;
+  **stock 84 / cash 16** in the uptrend regime (hedges exit when the regime is off).
 
 **Supported windows (with the data provided):**
 
@@ -48,6 +79,14 @@ modeled 0.11%, dividends, taxes, corporate actions / splits, other markets.
 ---
 
 ## 3. Input files / fields, units, sources, data-access instructions
+
+Two data sets are used (uploaded by the user). Paths are relative to the folder
+that contains this README (`<project_root>/2026-11-08/chat-1/work`); they are also
+configured via the `REPO*` constants at the top of the script:
+
+```
+2021-2022 files: ../../2026-11-07/chat-1/outputs   (REPO_OLD)
+2023-2026 files: ../..                              (REPO_NEW = <project_root>/2026-11-08)
 ```
 
 | File | Columns used | Units | Role |
@@ -76,13 +115,21 @@ Notes:
 
 ## 4. How to start
 
+Run from the folder that contains `plan_v2.py` (paths below are relative to that
+folder).
+
 Default (2021–2022):
 
+```bash
+python3 plan_v2.py
+```
+
 Other windows (the script intentionally has no CLI; override constants via an
-inline import — this is the exact command used):
+inline import — this is the exact pattern used):
 
 ```bash
 # 2022-2023 (in-memory merge; 2021 warm-up)
+python3 - <<'PY'
 import plan_v2
 plan_v2.START = "2022-01-03"
 plan_v2.END   = "2023-12-29"
@@ -90,8 +137,9 @@ plan_v2.main()
 PY
 
 # 2024-2026
+python3 - <<'PY'
 import os, plan_v2
-plan_v2.REPO     = "/Users/hoddychan/Documents/JiuwenSwarm/2026-11-08"
+plan_v2.REPO     = "../.."                        # <project_root>/2026-11-08
 plan_v2.START    = "2024-01-02"
 plan_v2.END      = "2026-10-30"
 plan_v2.HSI_CSV  = os.path.join(plan_v2.REPO, "HSI_daily_2023-01-01_to_2026-10-31.csv")
@@ -100,6 +148,9 @@ plan_v2.COM_CSV  = os.path.join(plan_v2.REPO, "Commodities_close_2023-01-01_to_2
 plan_v2.main()
 PY
 ```
+
+No skill invocation needed. Runtime: a few seconds per window.
+
 ---
 
 ## 5. One small example and its expected checks
@@ -145,9 +196,13 @@ Expected checks after a run:
 
 ## 6. Output files and what they mean
 
-| Planned file | Meaning |
+`plan_v2.py` prints a console summary only. The risk-profile runner variants
+(`plan_ra.py` risk-averse, `plan_rt.py` risk-taker, `plan_rn.py` risk-neutral)
+generate the full deliverables below, per window:
+
+| File | Meaning |
 |---|---|
-| `` | Every buy/sell/option event with price, amount, cost, reason, P&L |
+| `tables/<window>_trades.csv` | Every buy/sell/option event with price, amount, cost, reason, P&L |
 | `tables/<window>_monthly.csv` | Monthly rebalance rows (date, regime, target weights, holdings, NAV) |
 | `tables/<window>_nav.csv` | Daily NAV (portfolio vs HSI, normalized to 1,000,000) |
 | `tables/<window>_metrics.json` | Return, drawdown, Sharpe, tail loss, trade counts, costs |
@@ -172,8 +227,8 @@ Expected checks after a run:
 
 * **No CLI args yet** — windows are switched by overriding module constants
   (inline import) or editing the constants at the top of the file.
-* **Hard-coded absolute paths** — moving the job requires editing `REPO*`,
-  `*_CSV`, `START`, `END`.
+* **Paths are configured at the top of the file** — moving the job requires
+  editing `REPO*`, `*_CSV`, `START`, `END`.
 * **Close-based fills only** — no intraday OHLC; stops/targets trigger at the
   daily close, not intraday prices.
 * **2022–2023 uses an in-memory merge** of two CSV sets; requires the same 79
@@ -181,11 +236,13 @@ Expected checks after a run:
 * **Stylized put** — constant premium, modeled payoff (strike = 95% of sleeve at
   month start, settled at next rebalance including intra-month sleeve flows);
   no market quotes. If all stocks exit mid-month the payoff only covers actual
-  sleeve loss (flow-adjusted)
+  sleeve loss (flow-adjusted).
+* **MAX_HEDGE = 2 is a configurable assumption** — it caps the number of hedge
+  holdings per profile.
 * **Indicator warm-up**: with the 2022–2023 window, 2021 is warm-up; with
   2024–2026, 2023 is warm-up. If a window started at the very first data row,
   the first ~60 trading days would have no stock candidates.
-* Transaction costs is fixed at 0.11%/side (modeled), no dividends/taxes/splits.
+* No transaction costs beyond 0.11%/side (modeled), no dividends/taxes/splits.
 * Momentum/regime signals use only closes; results are sensitive to the specific
   CSV universe and window (e.g., +47% in 2024–2026 vs -19.7% in 2022–2023).
 
@@ -197,12 +254,14 @@ Expected checks after a run:
 
 * **Reused work**: `plan_v2.py` reuses the architecture of `enhance_plan.py`
   (same indicator math, backtest loop, stylized put model) with the v3 rule
-  changes; the earlier README (`README.md`) documents `enhance_plan.py`.
-* **Input data**: CSVs uploaded by the user on 2026-11-09 (2021–2022 set in
+  changes; the earlier README (`README-v1.md`) documents `enhance_plan.py`.
+* **Input data**: CSVs uploaded by the user (2021–2022 set in
   `2026-11-07/chat-1/outputs`, 2023–2026 set in `2026-11-08`).
-* **AI assistance**: script, rule implementation 
+* **AI assistance**: script, rule implementation and this README were produced
+  with AI (agent) assistance in a JiuwenSwarm/openJiuwen agent environment at the
+  user's request; the strategy rules were specified by the user.
 * **License**: no explicit license; treat as all-rights-reserved unless the
-  owner publishes one.
+  owner publishes one. The openJiuwen platform is Apache-2.0.
 
 ---
 
