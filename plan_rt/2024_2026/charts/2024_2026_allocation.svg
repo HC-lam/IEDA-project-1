@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="460" viewBox="0 0 620 460">
+<rect width="620" height="460" fill="white"/>
+<text x="310.0" y="24" text-anchor="middle" font-size="16" font-weight="bold">Plan RT Allocation by Asset (buy-value share)</text>
+<path d="M 210,230 L 210.0,80.0 A 150,150 0 0 1 264.0,90.1 Z" fill="#e74c3c" stroke="white"/>
+<text x="227.0" y="138.6" text-anchor="middle" font-size="10" fill="white">5.9%</text>
+<path d="M 210,230 L 264.0,90.1 A 150,150 0 0 1 307.2,115.7 Z" fill="#3498db" stroke="white"/>
+<text x="257.5" y="150.1" text-anchor="middle" font-size="10" fill="white">5.4%</text>
+<path d="M 210,230 L 307.2,115.7 A 150,150 0 0 1 338.6,152.8 Z" fill="#2ecc71" stroke="white"/>
+<text x="280.9" y="169.8" text-anchor="middle" font-size="10" fill="white">5.2%</text>
+<path d="M 210,230 L 338.6,152.8 A 150,150 0 0 1 355.8,194.9 Z" fill="#f39c12" stroke="white"/>
+<text x="296.1" y="194.8" text-anchor="middle" font-size="10" fill="white">4.8%</text>
+<path d="M 210,230 L 355.8,194.9 A 150,150 0 0 1 360.0,232.7 Z" fill="#9b59b6" stroke="white"/>
+<text x="302.4" y="219.9" text-anchor="middle" font-size="10" fill="white">4.0%</text>
+<path d="M 210,230 L 360.0,232.7 A 150,150 0 0 1 355.4,267.0 Z" fill="#1abc9c" stroke="white"/>
+<text x="302.2" y="242.4" text-anchor="middle" font-size="10" fill="white">3.7%</text>
+<path d="M 210,230 L 355.4,267.0 A 150,150 0 0 1 344.0,297.5 Z" fill="#e67e22" stroke="white"/>
+<text x="297.1" y="262.6" text-anchor="middle" font-size="10" fill="white">3.5%</text>
+<path d="M 210,230 L 344.0,297.5 A 150,150 0 0 1 330.2,319.8 Z" fill="#34495e" stroke="white"/>
+<text x="289.1" y="278.9" text-anchor="middle" font-size="10" fill="white">2.8%</text>
+<path d="M 210,230 L 330.2,319.8 A 150,150 0 0 1 313.2,338.9 Z" fill="#16a085" stroke="white"/>
+<text x="279.5" y="291.8" text-anchor="middle" font-size="10" fill="white">2.7%</text>
+<path d="M 210,230 L 313.2,338.9 A 150,150 0 0 1 294.3,354.0 Z" fill="#c0392b" stroke="white"/>
+<text x="268.3" y="302.4" text-anchor="middle" font-size="10" fill="white">2.6%</text>
+<path d="M 210,230 L 294.3,354.0 A 150,150 0 0 1 274.2,365.5 Z" fill="#2980b9" stroke="white"/>
+<text x="256.2" y="310.7" text-anchor="middle" font-size="10" fill="white">2.5%</text>
+<path d="M 210,230 L 274.2,365.5 A 150,150 0 0 1 255.2,373.0 Z" fill="#27ae60" stroke="white"/>
+<text x="244.0" y="316.6" text-anchor="middle" font-size="10" fill="white">2.2%</text>
+<path d="M 210,230 L 255.2,373.0 A 150,150 0 0 1 236.7,377.6 Z" fill="#8e44ad" stroke="white"/>
+<text x="232.3" y="320.3" text-anchor="middle" font-size="10" fill="white">2.0%</text>
+<path d="M 210,230 L 236.7,377.6 A 150,150 0 0 1 218.7,379.7 Z" fill="#f1c40f" stroke="white"/>
+<path d="M 210,230 L 218.7,379.7 A 150,150 0 0 1 200.6,379.7 Z" fill="#d35400" stroke="white"/>
+<path d="M 210,230 L 200.6,379.7 A 150,150 0 0 1 183.6,377.7 Z" fill="#7f8c8d" stroke="white"/>
+<path d="M 210,230 L 183.6,377.7 A 150,150 0 0 1 167.1,373.7 Z" fill="#e74c3c" stroke="white"/>
+<path d="M 210,230 L 167.1,373.7 A 150,150 0 0 1 151.4,368.1 Z" fill="#3498db" stroke="white"/>
+<path d="M 210,230 L 151.4,368.1 A 150,150 0 0 1 136.8,360.9 Z" fill="#2ecc71" stroke="white"/>
+<path d="M 210,230 L 136.8,360.9 A 150,150 0 0 1 123.9,352.8 Z" fill="#f39c12" stroke="white"/>
+<path d="M 210,230 L 123.9,352.8 A 150,150 0 0 1 112.5,344.0 Z" fill="#9b59b6" stroke="white"/>
+<path d="M 210,230 L 112.5,344.0 A 150,150 0 0 1 102.4,334.5 Z" fill="#1abc9c" stroke="white"/>
+<path d="M 210,230 L 102.4,334.5 A 150,150 0 0 1 93.3,324.3 Z" fill="#e67e22" stroke="white"/>
+<path d="M 210,230 L 93.3,324.3 A 150,150 0 0 1 85.2,313.2 Z" fill="#34495e" stroke="white"/>
+<path d="M 210,230 L 85.2,313.2 A 150,150 0 0 1 78.7,302.5 Z" fill="#16a085" stroke="white"/>
+<path d="M 210,230 L 78.7,302.5 A 150,150 0 0 1 73.2,291.4 Z" fill="#c0392b" stroke="white"/>
+<path d="M 210,230 L 73.2,291.4 A 150,150 0 0 1 68.7,280.3 Z" fill="#2980b9" stroke="white"/>
+<path d="M 210,230 L 68.7,280.3 A 150,150 0 0 1 65.2,269.1 Z" fill="#27ae60" stroke="white"/>
+<path d="M 210,230 L 65.2,269.1 A 150,150 0 0 1 62.7,258.3 Z" fill="#8e44ad" stroke="white"/>
+<path d="M 210,230 L 62.7,258.3 A 150,150 0 0 1 61.0,247.4 Z" fill="#f1c40f" stroke="white"/>
+<path d="M 210,230 L 61.0,247.4 A 150,150 0 0 1 60.1,236.5 Z" fill="#d35400" stroke="white"/>
+<path d="M 210,230 L 60.1,236.5 A 150,150 0 0 1 60.1,225.7 Z" fill="#7f8c8d" stroke="white"/>
+<path d="M 210,230 L 60.1,225.7 A 150,150 0 0 1 60.8,214.9 Z" fill="#e74c3c" stroke="white"/>
+<path d="M 210,230 L 60.8,214.9 A 150,150 0 0 1 62.2,204.3 Z" fill="#3498db" stroke="white"/>
+<path d="M 210,230 L 62.2,204.3 A 150,150 0 0 1 64.4,193.9 Z" fill="#2ecc71" stroke="white"/>
+<path d="M 210,230 L 64.4,193.9 A 150,150 0 0 1 67.3,183.9 Z" fill="#f39c12" stroke="white"/>
+<path d="M 210,230 L 67.3,183.9 A 150,150 0 0 1 70.6,174.5 Z" fill="#9b59b6" stroke="white"/>
+<path d="M 210,230 L 70.6,174.5 A 150,150 0 0 1 74.4,165.8 Z" fill="#1abc9c" stroke="white"/>
+<path d="M 210,230 L 74.4,165.8 A 150,150 0 0 1 78.5,157.7 Z" fill="#e67e22" stroke="white"/>
+<path d="M 210,230 L 78.5,157.7 A 150,150 0 0 1 83.0,150.1 Z" fill="#34495e" stroke="white"/>
+<path d="M 210,230 L 83.0,150.1 A 150,150 0 0 1 88.0,142.8 Z" fill="#16a085" stroke="white"/>
+<path d="M 210,230 L 88.0,142.8 A 150,150 0 0 1 93.1,136.0 Z" fill="#c0392b" stroke="white"/>
+<path d="M 210,230 L 93.1,136.0 A 150,150 0 0 1 98.1,130.1 Z" fill="#2980b9" stroke="white"/>
+<path d="M 210,230 L 98.1,130.1 A 150,150 0 0 1 103.4,124.5 Z" fill="#27ae60" stroke="white"/>
+<path d="M 210,230 L 103.4,124.5 A 150,150 0 0 1 108.8,119.3 Z" fill="#8e44ad" stroke="white"/>
+<path d="M 210,230 L 108.8,119.3 A 150,150 0 0 1 114.2,114.6 Z" fill="#f1c40f" stroke="white"/>
+<path d="M 210,230 L 114.2,114.6 A 150,150 0 0 1 119.5,110.3 Z" fill="#d35400" stroke="white"/>
+<path d="M 210,230 L 119.5,110.3 A 150,150 0 0 1 124.7,106.6 Z" fill="#7f8c8d" stroke="white"/>
+<path d="M 210,230 L 124.7,106.6 A 150,150 0 0 1 130.0,103.1 Z" fill="#e74c3c" stroke="white"/>
+<path d="M 210,230 L 130.0,103.1 A 150,150 0 0 1 135.5,99.8 Z" fill="#3498db" stroke="white"/>
+<path d="M 210,230 L 135.5,99.8 A 150,150 0 0 1 140.7,97.0 Z" fill="#2ecc71" stroke="white"/>
+<path d="M 210,230 L 140.7,97.0 A 150,150 0 0 1 146.0,94.4 Z" fill="#f39c12" stroke="white"/>
+<path d="M 210,230 L 146.0,94.4 A 150,150 0 0 1 150.8,92.2 Z" fill="#9b59b6" stroke="white"/>
+<path d="M 210,230 L 150.8,92.2 A 150,150 0 0 1 155.7,90.2 Z" fill="#1abc9c" stroke="white"/>
+<path d="M 210,230 L 155.7,90.2 A 150,150 0 0 1 160.3,88.5 Z" fill="#e67e22" stroke="white"/>
+<path d="M 210,230 L 160.3,88.5 A 150,150 0 0 1 164.8,87.0 Z" fill="#34495e" stroke="white"/>
+<path d="M 210,230 L 164.8,87.0 A 150,150 0 0 1 169.4,85.6 Z" fill="#16a085" stroke="white"/>
+<path d="M 210,230 L 169.4,85.6 A 150,150 0 0 1 173.5,84.5 Z" fill="#c0392b" stroke="white"/>
+<path d="M 210,230 L 173.5,84.5 A 150,150 0 0 1 177.2,83.6 Z" fill="#2980b9" stroke="white"/>
+<path d="M 210,230 L 177.2,83.6 A 150,150 0 0 1 180.8,82.9 Z" fill="#27ae60" stroke="white"/>
+<path d="M 210,230 L 180.8,82.9 A 150,150 0 0 1 184.5,82.2 Z" fill="#8e44ad" stroke="white"/>
+<path d="M 210,230 L 184.5,82.2 A 150,150 0 0 1 188.2,81.6 Z" fill="#f1c40f" stroke="white"/>
+<path d="M 210,230 L 188.2,81.6 A 150,150 0 0 1 191.7,81.1 Z" fill="#d35400" stroke="white"/>
+<path d="M 210,230 L 191.7,81.1 A 150,150 0 0 1 195.2,80.7 Z" fill="#7f8c8d" stroke="white"/>
+<path d="M 210,230 L 195.2,80.7 A 150,150 0 0 1 198.8,80.4 Z" fill="#e74c3c" stroke="white"/>
+<path d="M 210,230 L 198.8,80.4 A 150,150 0 0 1 202.0,80.2 Z" fill="#3498db" stroke="white"/>
+<path d="M 210,230 L 202.0,80.2 A 150,150 0 0 1 204.8,80.1 Z" fill="#2ecc71" stroke="white"/>
+<path d="M 210,230 L 204.8,80.1 A 150,150 0 0 1 207.7,80.0 Z" fill="#f39c12" stroke="white"/>
+<path d="M 210,230 L 207.7,80.0 A 150,150 0 0 1 210.0,80.0 Z" fill="#9b59b6" stroke="white"/>
+<rect x="410" y="32" width="14" height="14" fill="#e74c3c"/>
+<text x="432" y="40" font-size="11">0005.HK: 5.9%</text>
+<rect x="410" y="54" width="14" height="14" fill="#3498db"/>
+<text x="432" y="62" font-size="11">Oil: 5.4%</text>
+<rect x="410" y="76" width="14" height="14" fill="#2ecc71"/>
+<text x="432" y="84" font-size="11">Gold: 5.2%</text>
+<rect x="410" y="98" width="14" height="14" fill="#f39c12"/>
+<text x="432" y="106" font-size="11">Silver: 4.8%</text>
+<rect x="410" y="120" width="14" height="14" fill="#9b59b6"/>
+<text x="432" y="128" font-size="11">0669.HK: 4.0%</text>
+<rect x="410" y="142" width="14" height="14" fill="#1abc9c"/>
+<text x="432" y="150" font-size="11">2269.HK: 3.7%</text>
+<rect x="410" y="164" width="14" height="14" fill="#e67e22"/>
+<text x="432" y="172" font-size="11">9999.HK: 3.5%</text>
+<rect x="410" y="186" width="14" height="14" fill="#34495e"/>
+<text x="432" y="194" font-size="11">0981.HK: 2.8%</text>
+<rect x="410" y="208" width="14" height="14" fill="#16a085"/>
+<text x="432" y="216" font-size="11">0883.HK: 2.7%</text>
+<rect x="410" y="230" width="14" height="14" fill="#c0392b"/>
+<text x="432" y="238" font-size="11">0992.HK: 2.6%</text>
+<rect x="410" y="252" width="14" height="14" fill="#2980b9"/>
+<text x="432" y="260" font-size="11">0836.HK: 2.5%</text>
+<rect x="410" y="274" width="14" height="14" fill="#27ae60"/>
+<text x="432" y="282" font-size="11">2382.HK: 2.2%</text>
+<rect x="410" y="296" width="14" height="14" fill="#8e44ad"/>
+<text x="432" y="304" font-size="11">6862.HK: 2.0%</text>
+<rect x="410" y="318" width="14" height="14" fill="#f1c40f"/>
+<text x="432" y="326" font-size="11">2388.HK: 1.9%</text>
+<rect x="410" y="340" width="14" height="14" fill="#d35400"/>
+<text x="432" y="348" font-size="11">0001.HK: 1.9%</text>
+<rect x="410" y="362" width="14" height="14" fill="#7f8c8d"/>
+<text x="432" y="370" font-size="11">9618.HK: 1.8%</text>
+<rect x="410" y="384" width="14" height="14" fill="#e74c3c"/>
+<text x="432" y="392" font-size="11">0857.HK: 1.8%</text>
+<rect x="410" y="406" width="14" height="14" fill="#3498db"/>
+<text x="432" y="414" font-size="11">2007.HK: 1.8%</text>
+<rect x="410" y="428" width="14" height="14" fill="#2ecc71"/>
+<text x="432" y="436" font-size="11">1038.HK: 1.7%</text>
+<rect x="410" y="450" width="14" height="14" fill="#f39c12"/>
+<text x="432" y="458" font-size="11">0016.HK: 1.6%</text>
+<rect x="410" y="472" width="14" height="14" fill="#9b59b6"/>
+<text x="432" y="480" font-size="11">0006.HK: 1.5%</text>
+<rect x="410" y="494" width="14" height="14" fill="#1abc9c"/>
+<text x="432" y="502" font-size="11">3968.HK: 1.5%</text>
+<rect x="410" y="516" width="14" height="14" fill="#e67e22"/>
+<text x="432" y="524" font-size="11">0823.HK: 1.5%</text>
+<rect x="410" y="538" width="14" height="14" fill="#34495e"/>
+<text x="432" y="546" font-size="11">9961.HK: 1.5%</text>
+<rect x="410" y="560" width="14" height="14" fill="#16a085"/>
+<text x="432" y="568" font-size="11">1209.HK: 1.3%</text>
+<rect x="410" y="582" width="14" height="14" fill="#c0392b"/>
+<text x="432" y="590" font-size="11">1177.HK: 1.3%</text>
+<rect x="410" y="604" width="14" height="14" fill="#2980b9"/>
+<text x="432" y="612" font-size="11">1810.HK: 1.3%</text>
+<rect x="410" y="626" width="14" height="14" fill="#27ae60"/>
+<text x="432" y="634" font-size="11">1928.HK: 1.2%</text>
+<rect x="410" y="648" width="14" height="14" fill="#8e44ad"/>
+<text x="432" y="656" font-size="11">0017.HK: 1.2%</text>
+<rect x="410" y="670" width="14" height="14" fill="#f1c40f"/>
+<text x="432" y="678" font-size="11">1398.HK: 1.2%</text>
+<rect x="410" y="692" width="14" height="14" fill="#d35400"/>
+<text x="432" y="700" font-size="11">0939.HK: 1.2%</text>
+<rect x="410" y="714" width="14" height="14" fill="#7f8c8d"/>
+<text x="432" y="722" font-size="11">9988.HK: 1.1%</text>
+<rect x="410" y="736" width="14" height="14" fill="#e74c3c"/>
+<text x="432" y="744" font-size="11">1093.HK: 1.1%</text>
+<rect x="410" y="758" width="14" height="14" fill="#3498db"/>
+<text x="432" y="766" font-size="11">0386.HK: 1.1%</text>
+<rect x="410" y="780" width="14" height="14" fill="#2ecc71"/>
+<text x="432" y="788" font-size="11">6618.HK: 1.1%</text>
+<rect x="410" y="802" width="14" height="14" fill="#f39c12"/>
+<text x="432" y="810" font-size="11">1378.HK: 1.1%</text>
+<rect x="410" y="824" width="14" height="14" fill="#9b59b6"/>
+<text x="432" y="832" font-size="11">0881.HK: 1.1%</text>
+<rect x="410" y="846" width="14" height="14" fill="#1abc9c"/>
+<text x="432" y="854" font-size="11">0316.HK: 1.0%</text>
+<rect x="410" y="868" width="14" height="14" fill="#e67e22"/>
+<text x="432" y="876" font-size="11">0002.HK: 1.0%</text>
+<rect x="410" y="890" width="14" height="14" fill="#34495e"/>
+<text x="432" y="898" font-size="11">0322.HK: 0.9%</text>
+<rect x="410" y="912" width="14" height="14" fill="#16a085"/>
+<text x="432" y="920" font-size="11">0285.HK: 0.9%</text>
+<rect x="410" y="934" width="14" height="14" fill="#c0392b"/>
+<text x="432" y="942" font-size="11">1024.HK: 0.9%</text>
+<rect x="410" y="956" width="14" height="14" fill="#2980b9"/>
+<text x="432" y="964" font-size="11">2628.HK: 0.8%</text>
+<rect x="410" y="978" width="14" height="14" fill="#27ae60"/>
+<text x="432" y="986" font-size="11">2319.HK: 0.8%</text>
+<rect x="410" y="1000" width="14" height="14" fill="#8e44ad"/>
+<text x="432" y="1008" font-size="11">0012.HK: 0.8%</text>
+<rect x="410" y="1022" width="14" height="14" fill="#f1c40f"/>
+<text x="432" y="1030" font-size="11">0288.HK: 0.8%</text>
+<rect x="410" y="1044" width="14" height="14" fill="#d35400"/>
+<text x="432" y="1052" font-size="11">0267.HK: 0.7%</text>
+<rect x="410" y="1066" width="14" height="14" fill="#7f8c8d"/>
+<text x="432" y="1074" font-size="11">0762.HK: 0.7%</text>
+<rect x="410" y="1088" width="14" height="14" fill="#e74c3c"/>
+<text x="432" y="1096" font-size="11">0941.HK: 0.7%</text>
+<rect x="410" y="1110" width="14" height="14" fill="#3498db"/>
+<text x="432" y="1118" font-size="11">3988.HK: 0.7%</text>
+<rect x="410" y="1132" width="14" height="14" fill="#2ecc71"/>
+<text x="432" y="1140" font-size="11">3690.HK: 0.6%</text>
+<rect x="410" y="1154" width="14" height="14" fill="#f39c12"/>
+<text x="432" y="1162" font-size="11">9633.HK: 0.6%</text>
+<rect x="410" y="1176" width="14" height="14" fill="#9b59b6"/>
+<text x="432" y="1184" font-size="11">0868.HK: 0.6%</text>
+<rect x="410" y="1198" width="14" height="14" fill="#1abc9c"/>
+<text x="432" y="1206" font-size="11">0027.HK: 0.6%</text>
+<rect x="410" y="1220" width="14" height="14" fill="#e67e22"/>
+<text x="432" y="1228" font-size="11">0175.HK: 0.5%</text>
+<rect x="410" y="1242" width="14" height="14" fill="#34495e"/>
+<text x="432" y="1250" font-size="11">2331.HK: 0.5%</text>
+<rect x="410" y="1264" width="14" height="14" fill="#16a085"/>
+<text x="432" y="1272" font-size="11">1211.HK: 0.5%</text>
+<rect x="410" y="1286" width="14" height="14" fill="#c0392b"/>
+<text x="432" y="1294" font-size="11">0241.HK: 0.4%</text>
+<rect x="410" y="1308" width="14" height="14" fill="#2980b9"/>
+<text x="432" y="1316" font-size="11">1113.HK: 0.4%</text>
+<rect x="410" y="1330" width="14" height="14" fill="#27ae60"/>
+<text x="432" y="1338" font-size="11">2313.HK: 0.4%</text>
+<rect x="410" y="1352" width="14" height="14" fill="#8e44ad"/>
+<text x="432" y="1360" font-size="11">2318.HK: 0.4%</text>
+<rect x="410" y="1374" width="14" height="14" fill="#f1c40f"/>
+<text x="432" y="1382" font-size="11">1299.HK: 0.4%</text>
+<rect x="410" y="1396" width="14" height="14" fill="#d35400"/>
+<text x="432" y="1404" font-size="11">0003.HK: 0.4%</text>
+<rect x="410" y="1418" width="14" height="14" fill="#7f8c8d"/>
+<text x="432" y="1426" font-size="11">1088.HK: 0.4%</text>
+<rect x="410" y="1440" width="14" height="14" fill="#e74c3c"/>
+<text x="432" y="1448" font-size="11">1044.HK: 0.4%</text>
+<rect x="410" y="1462" width="14" height="14" fill="#3498db"/>
+<text x="432" y="1470" font-size="11">1099.HK: 0.3%</text>
+<rect x="410" y="1484" width="14" height="14" fill="#2ecc71"/>
+<text x="432" y="1492" font-size="11">6690.HK: 0.3%</text>
+<rect x="410" y="1506" width="14" height="14" fill="#f39c12"/>
+<text x="432" y="1514" font-size="11">1997.HK: 0.3%</text>
+<rect x="410" y="1528" width="14" height="14" fill="#9b59b6"/>
+<text x="432" y="1536" font-size="11">6098.HK: 0.2%</text>
+</svg>
