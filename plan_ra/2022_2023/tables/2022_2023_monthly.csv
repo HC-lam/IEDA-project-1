@@ -1,0 +1,25 @@
+Date,HedgeRegime,TargetStock,TargetHedge,TargetCash,StocksHeld,HedgesHeld,Option,NAV
+2022-01-03,True,0.2,0.3,0.5,"0316.HK,1928.HK,9633.HK","Gold,Silver,Oil",PUT on stock sleeve,998651.8989890001
+2022-02-04,True,0.2,0.3,0.5,"0316.HK,0960.HK,1928.HK","Gold,Silver,Oil",PUT on stock sleeve,1007167.534602
+2022-03-01,True,0.2,0.3,0.5,"0316.HK,1378.HK,1928.HK","Gold,Silver,Oil",PUT on stock sleeve,1036730.4376015002
+2022-04-01,True,0.2,0.3,0.5,"0883.HK,1088.HK,1378.HK","Gold,Silver,Oil",PUT on stock sleeve,1020805.2532650002
+2022-05-03,True,0.2,0.3,0.5,"0006.HK,0316.HK,1088.HK","Gold,Silver,Oil",PUT on stock sleeve,1002008.0342605001
+2022-06-01,False,0.2,0.3,0.5,"0316.HK,0883.HK,1088.HK","Gold,Silver,Oil",,1018931.3081225001
+2022-07-04,False,0.2,0.3,0.5,"0175.HK,0285.HK,6618.HK","Gold,Silver,Oil",,995944.5966145
+2022-08-01,True,0.2,0.3,0.5,"0291.HK,0316.HK,6618.HK","Gold,Silver,Oil",PUT on stock sleeve,962034.6303645001
+2022-09-01,True,0.2,0.3,0.5,"0291.HK,6862.HK,9961.HK","Gold,Silver,Oil",PUT on stock sleeve,926888.4285975001
+2022-10-03,True,0.2,0.3,0.5,"0291.HK,1928.HK,9961.HK","Gold,Silver,Oil",PUT on stock sleeve,930977.8444495001
+2022-11-01,True,0.2,0.3,0.5,"0285.HK,0981.HK,0992.HK","Gold,Silver,Oil",PUT on stock sleeve,917990.9137550001
+2022-12-01,False,0.2,0.3,0.5,"0285.HK,0981.HK,0992.HK","Gold,Silver,Oil",,938057.7272075
+2023-01-03,False,0.2,0.3,0.5,"0285.HK,0981.HK,0992.HK","Gold,Silver,Oil",,943122.447192
+2023-02-01,False,0.2,0.3,0.5,"0285.HK,0981.HK,0992.HK","Gold,Silver,Oil",,956484.658243
+2023-03-01,True,0.2,0.3,0.5,"0992.HK,6862.HK,9633.HK","Gold,Silver,Oil",PUT on stock sleeve,935328.624299
+2023-04-03,True,0.2,0.3,0.5,"0992.HK,9633.HK,9888.HK","Gold,Silver,Oil",PUT on stock sleeve,960328.5851100001
+2023-05-02,True,0.2,0.3,0.5,"0857.HK,0992.HK,1099.HK","Gold,Silver,Oil",PUT on stock sleeve,946657.7300430003
+2023-06-01,True,0.2,0.3,0.5,"0857.HK,1099.HK","Gold,Silver,Oil",PUT on stock sleeve,926867.3081650003
+2023-07-03,True,0.2,0.3,0.5,"0002.HK,0836.HK,0857.HK","Gold,Silver,Oil",PUT on stock sleeve,922545.5865120004
+2023-08-01,False,0.2,0.3,0.5,"0002.HK,0857.HK,9888.HK","Gold,Silver,Oil",,946276.2106835003
+2023-09-04,True,0.2,0.3,0.5,"0285.HK,0857.HK,1378.HK","Gold,Silver,Oil",PUT on stock sleeve,937749.8046495002
+2023-10-03,True,0.2,0.3,0.5,"0285.HK,0857.HK,2269.HK","Gold,Silver,Oil",PUT on stock sleeve,914025.6752495002
+2023-11-01,True,0.2,0.3,0.5,"0981.HK,1810.HK,2269.HK","Gold,Silver,Oil",PUT on stock sleeve,912159.7214605003
+2023-12-01,True,0.2,0.3,0.5,"0288.HK,1088.HK,1810.HK","Gold,Silver,Oil",PUT on stock sleeve,915677.9471945001
