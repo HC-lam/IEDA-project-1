@@ -1,0 +1,49 @@
+{
+  "window": {
+    "start": "2024-01-02",
+    "end": "2026-10-30",
+    "days": 696,
+    "rebalances": 34
+  },
+  "portfolio": {
+    "final_value": 1180782.5822445,
+    "final_return_pct": 18.46685920629525,
+    "max_drawdown_pct": -18.973805771713252,
+    "sharpe": 0.46326642963722764,
+    "tail_loss_pct": -1.460308966288193
+  },
+  "hsi": {
+    "final_value": 1387518.2788269385,
+    "final_return_pct": 38.751827882693846,
+    "max_drawdown_pct": -19.9540271461063,
+    "sharpe": 0.6308812652433347,
+    "tail_loss_pct": -1.9554618393871848
+  },
+  "hedge": {
+    "max_holdings_cap": 3,
+    "commodity_buys": 46,
+    "commodity_sells": 57,
+    "peak_hedges": 3
+  },
+  "trades": {
+    "count": 296,
+    "stock_buys": 69,
+    "stock_sells": 107,
+    "commodity_buys": 46,
+    "commodity_sells": 57,
+    "options": 17,
+    "realized_pnl_from_sells": 195139.93999999983,
+    "transaction_costs": 68302.00959800003
+  },
+  "rules": {
+    "max_stocks": 5,
+    "max_hedge": 3,
+    "cost_per_side": 0.0011,
+    "stop_loss": 0.1,
+    "target": 0.5,
+    "macd_down": -0.1,
+    "allocation": "cash 20 / hedge 20(dn)-10(up) / stock 60(dn)-70(up) (risk-neutral)",
+    "stock_downtrend": "close<SMA20 AND DIF<-0.1",
+    "hedge_regime": "HSI close<SMA50 only (no MACD); hedge entry close>SMA20, exit close<SMA20, equal-weight split"
+  }
+}
