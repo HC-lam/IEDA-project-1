@@ -1,0 +1,49 @@
+{
+  "window": {
+    "start": "2022-01-03",
+    "end": "2023-12-29",
+    "days": 489,
+    "rebalances": 24
+  },
+  "portfolio": {
+    "final_value": 900974.3632549999,
+    "final_return_pct": -9.780937529447453,
+    "max_drawdown_pct": -15.508847944248249,
+    "sharpe": -0.5814599540400264,
+    "tail_loss_pct": -0.7947057600211971
+  },
+  "hsi": {
+    "final_value": 732441.3796066552,
+    "final_return_pct": -26.755862039334477,
+    "max_drawdown_pct": -41.17085343603485,
+    "sharpe": -0.4330392952832335,
+    "tail_loss_pct": -2.501631256748682
+  },
+  "hedge": {
+    "max_holdings_cap": 3,
+    "commodity_buys": 23,
+    "commodity_sells": 59,
+    "peak_hedges": 3
+  },
+  "trades": {
+    "count": 189,
+    "stock_buys": 41,
+    "stock_sells": 41,
+    "commodity_buys": 23,
+    "commodity_sells": 59,
+    "options": 25,
+    "realized_pnl_from_sells": -106599.88999999998,
+    "transaction_costs": 26564.285413000005
+  },
+  "rules": {
+    "max_stocks": 3,
+    "max_hedge": 3,
+    "cost_per_side": 0.0011,
+    "stop_loss": 0.1,
+    "target": 0.2,
+    "macd_down": -0.1,
+    "allocation": "cash 50 / hedge 30 / stock 20 fixed in both regimes (risk-averse)",
+    "stock_downtrend": "close<SMA20 AND DIF<-0.1",
+    "hedge_regime": "HSI close<SMA50 only (no MACD); hedge rebalanced monthly, entry close>SMA50, exit close<SMA50, equal-weight split"
+  }
+}
