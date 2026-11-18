@@ -27,7 +27,7 @@ runner variants.
 
 Created **2026-11-09** at the user's request (plan_v2); the risk-profile runners
 and the reuse case were added **2026-11-15**; the risk-aversion survey
-(`risk_profiler.py`) was added **2026-11-16** and fixed/validated **2026-11-17**.
+(`risk-aversion evalution.py`) was added **2026-11-16** and fixed/validated **2026-11-17**.
 Evolved from `enhance_plan.py` (5-enhancement variant, 2026-11-08).
 
 ---
@@ -75,7 +75,7 @@ For the default (v3) profile implemented in `plan_v2.py`:
 * Allocation: **stock 40 / hedge 30 / cash 30** in the HSI downtrend regime;
   **stock 84 / cash 16** in the uptrend regime (hedges exit when the regime is off).
 
-**The risk profiler (`risk_profiler.py`)** — a 15-question multiple-choice survey:
+**The risk profiler (`risk-aversion evalution.py`)** — a 15-question multiple-choice survey:
 
 * **Q1–Q6 (weight 0.20)** — gamble / certainty-equivalent choices. Each answer is
   a guaranteed amount (CE); γ is solved numerically from
