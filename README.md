@@ -1,4 +1,4 @@
-# Risk-Profile HK Portfolio Backtest — plan_v2 family + risk profiler (retail investor)
+# Robo-advisor with HK Portfolio Backtest 
 
 A self-contained, pure-stdlib Python project that (1) **profiles an investor's
 risk aversion** with a 15-question multiple-choice survey and (2) **backtests an
@@ -178,43 +178,17 @@ RECOMMENDED INVESTMENT ALLOCATION
 
 **2) Quick-run backtest** (default 2021–2022):
 
-```bash
+```
 python3 plan_v2.py
 ```
 
-Other windows (the script intentionally has no CLI; override constants via an
-inline import — this is the exact pattern used):
 
+**3) Risk-profile runner variants** (runs 2022–2023 and 2024–2026 )
 ```bash
-# 2022-2023 (in-memory merge; 2021 warm-up)
-python3 - <<'PY'
-import plan_v2
-plan_v2.START = "2022-01-03"
-plan_v2.END   = "2023-12-29"
-plan_v2.main()
-PY
-
-# 2024-2026
-python3 - <<'PY'
-import os, plan_v2
-plan_v2.REPO     = "../.."                        # <project_root>/2026-11-08
-plan_v2.START    = "2024-01-02"
-plan_v2.END      = "2026-10-30"
-plan_v2.HSI_CSV  = os.path.join(plan_v2.REPO, "HSI_daily_2023-01-01_to_2026-10-31.csv")
-plan_v2.WIDE_CSV = os.path.join(plan_v2.REPO, "HK_stocks_close_2023-01-01_to_2026-10-31_wide.csv")
-plan_v2.COM_CSV  = os.path.join(plan_v2.REPO, "Commodities_close_2023-01-01_to_2026-10-31_wide.csv")
-plan_v2.main()
-PY
-```
-
-**3) Risk-profile runner variants** (each runs 2022–2023 and 2024–2026 and
-writes full deliverables under `<project_root>/2026-11-08/portfolio_eval/<variant>/`):
-
-```bash
-python3 plan_ra.py    # risk-averse  -> portfolio_eval/plan_ra
-python3 plan_rn.py    # risk-neutral -> portfolio_eval/plan_rn
-python3 plan_rt.py    # risk-taker   -> portfolio_eval/plan_rt
-python3 plan_reuse.py # reuse case   -> portfolio_eval/plan_reuse_2023_2025
+python3 plan_ra.py    # risk-averse  
+python3 plan_rn.py    # risk-neutral 
+python3 plan_rt.py    # risk-taker   
+python3 plan_reuse.py # reuse case   
 ```
 
 No skill invocation needed. Runtime: a few seconds per window for the runners;
@@ -239,7 +213,7 @@ RISK-AVERSE (verified after the 2026-11-17 fix).
 Verified console summary for `plan_v2.py` (run 2026-11-09) — **2022–2023** window:
 
 ```text
-PLAN V3 (latest rules) - APPROXIMATE RESULT | 2022-2023
+PLAN V2 (latest rules) - APPROXIMATE RESULT | 2022-2023
 Window: 2022-01-03 .. 2023-12-29 (489 days, 24 monthly rebalances)
 Portfolio final NAV: 801,379.50   final return: -19.67%
 HSI        final NAV: 732,441.38   final return: -26.76%
@@ -293,9 +267,8 @@ under `<project_root>/2026-11-08/portfolio_eval/<variant>/`:
 | `<window>_plan.xlsx` | 3 sheets (Trades, Monthly Allocation, Metrics) |
 | `<variant>_outputs.zip` | Zipped copy of the window outputs for the variant |
 
-Current runner output folders: `portfolio_eval/plan_ra`, `portfolio_eval/plan_rn`,
-`portfolio_eval/plan_rt`, `portfolio_eval/plan_reuse_2023_2025`, plus the legacy
-`enhance_plan` outputs at the `portfolio_eval` root.
+Current runner output folders: 
+
 
 ---
 
@@ -315,25 +288,12 @@ Current runner output folders: `portfolio_eval/plan_ra`, `portfolio_eval/plan_rn
 ---
 
 ## 8. Known failures and limitations
-
-* **No CLI args yet** — windows are switched by overriding module constants
-  (inline import) or editing the constants at the top of the file.
-* **Paths are configured at the top of the file** — moving the job requires
-  editing `REPO*`, `*_CSV`, `START`, `END`, and the runner `OUT_BASE`.
 * **Close-based fills only** — no intraday OHLC; stops/targets trigger at the
   daily close, not intraday prices.
-* **2022–2023 uses an in-memory merge** of two CSV sets; requires the same 79
-  ticker columns in both wide files (verified) and contiguous dates.
 * **Stylized put** — constant premium, modeled payoff (strike = 95% of sleeve at
   month start, settled at next rebalance including intra-month sleeve flows);
   no market quotes. If all stocks exit mid-month the payoff only covers actual
   sleeve loss (flow-adjusted).
-* **MAX_HEDGE is a configurable assumption** — 2 for the v3 default, 3 for the
-  runner variants; it caps the number of hedge holdings per profile.
-* **Indicator warm-up**: with the 2022–2023 window, 2021 is warm-up; with
-  2024–2026, 2023 is warm-up; with the 2023–2025 reuse case, 2022 is warm-up.
-  If a window started at the very first data row, the first ~60 trading days
-  would have no stock candidates.
 * **Risk profiler is a survey-based estimate** — self-reported answers, not a
   calibrated psychometric instrument; the classification bands
   (0.5 / 2.0) are practical conventions, not theory-derived cut-offs; the CE
@@ -352,15 +312,13 @@ Current runner output folders: `portfolio_eval/plan_ra`, `portfolio_eval/plan_rn
   (same indicator math, backtest loop, stylized put model) with the v3 rule
   changes; `plan_ra.py` / `plan_rn.py` / `plan_rt.py` are built from the
   `plan_v2.py` rule set with per-profile allocation/stop/target constants;
-  `plan_reuse.py` demonstrates applying the v3 rules to a new window; the
+  `plan_reuse.py` demonstrates applying the v2 rules to a new window; the
   earlier README (`README-v1.md`) documents `enhance_plan.py`.
 * **Input data**: CSVs uploaded by the user (2021–2022 set in
   `2026-11-07/chat-1/outputs`, 2023–2026 set in `2026-11-08`).
-* **AI assistance**: scripts, rule implementation and this README were produced
-  with AI (agent) assistance in a JiuwenSwarm/openJiuwen agent environment at the
-  user's request; the strategy rules were specified by the user.
-* **License**: no explicit license; treat as all-rights-reserved unless the
-  owner publishes one. The openJiuwen platform is Apache-2.0.
+* **AI assistance**: scripts, rule implementation were produced
+  with AI (agent) assistance in a JiuwenSwarm/openJiuwen agent 
+*  The openJiuwen platform is Apache-2.0.
 
 ---
 
@@ -370,7 +328,3 @@ Current runner output folders: `portfolio_eval/plan_ra`, `portfolio_eval/plan_rn
 * Flagship public repo (this agent ecosystem): **https://github.com/openJiuwen-ai/jiuwenswarm**
   (Apache-2.0)
 * Official site / docs: **https://openjiuwen.com**
-* **Version**: no formal version tags — "v3 rules" dated **2026-11-09**,
-  risk-profile runners **2026-11-15**, risk profiler **2026-11-16** (fixed
-  **2026-11-17**). For the public project version, check the `jiuwenswarm`
-  repository's **Releases** page (no pinned release number asserted here).
