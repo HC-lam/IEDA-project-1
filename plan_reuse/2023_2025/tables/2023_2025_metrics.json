@@ -1,0 +1,50 @@
+{
+  "window": {
+    "start": "2023-01-03",
+    "end": "2025-12-31",
+    "days": 735,
+    "rebalances": 36
+  },
+  "portfolio": {
+    "final_value": 902451.2375330001,
+    "final_return_pct": -9.671355341838517,
+    "max_drawdown_pct": -21.720815431623986,
+    "sharpe": -0.1419050464077396,
+    "tail_loss_pct": -1.2938217294307996
+  },
+  "hsi": {
+    "final_value": 1272284.489327282,
+    "final_return_pct": 27.2284489327282,
+    "max_drawdown_pct": -34.0594740159285,
+    "sharpe": 0.46630024845418244,
+    "tail_loss_pct": -2.078466579156335
+  },
+  "hedge": {
+    "max_holdings_cap": 1,
+    "commodity_buys": 11,
+    "commodity_sells": 17,
+    "peak_hedges": 1
+  },
+  "trades": {
+    "count": 243,
+    "stock_buys": 88,
+    "stock_sells": 106,
+    "commodity_buys": 11,
+    "commodity_sells": 17,
+    "options": 21,
+    "realized_pnl_from_sells": -74660.08999999988,
+    "transaction_costs": 47756.796445
+  },
+  "rules": {
+    "max_stocks": 8,
+    "max_hedge": 1,
+    "cost_per_side": 0.0011,
+    "stop_loss": 0.15,
+    "target": 0.6,
+    "macd_down": -0.1,
+    "universe": "30 selected HK names (0001.HK-0868.HK)",
+    "hedge_assets": "Gold only",
+    "stock_downtrend": "close<SMA20 AND DIF<-0.1",
+    "hedge_regime": "HSI close<SMA50 only (no MACD), no commodity filter"
+  }
+}
