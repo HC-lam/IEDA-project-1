@@ -330,7 +330,7 @@ under `<project_root>/2026-11-08/portfolio_eval/<variant>/`:
   `plan_rt/2024-2026/charts/2024-2026_comparison.svg /2024-2026_timeline.svg /2024-2026_allocation.svg`
   `plan_rt/2024-2026/2024-2026_plan.xlsx`,
 
-* (Risk take)Files for plan_rt(2022-2023):
+* Files for plan_reuse(2023-2025):
   `plan_reuse/2023-2025/tables/2023-2025_trades.csv`,
   `plan_reuse/2023-2025/tables/2023-2025_monthly.csv`,
   `plan_reuse/2023-2025/tables/2023-2025_nav.csv`,
