@@ -259,16 +259,76 @@ under `<project_root>/2026-11-08/portfolio_eval/<variant>/`:
 
 | File | Meaning |
 |---|---|
-| `tables/<window>_trades.csv` | Every buy/sell/option event with price, amount, cost, reason, P&L |
-| `tables/<window>_monthly.csv` | Monthly rebalance rows (date, regime, target weights, holdings, NAV) |
-| `tables/<window>_nav.csv` | Daily NAV (portfolio vs HSI, normalized to 1,000,000) |
-| `tables/<window>_metrics.json` | Return, drawdown, Sharpe, tail loss, trade counts, costs |
-| `charts/…comparison.svg / timeline.svg / allocation.svg` | Portfolio vs HSI; trade timeline; allocation |
-| `<window>_plan.xlsx` | 3 sheets (Trades, Monthly Allocation, Metrics) |
-| `<variant>_outputs.zip` | Zipped copy of the window outputs for the variant |
+| `plan_xx/202x-202x/tables/<window>_trades.csv` | Every buy/sell/option event with price, amount, cost, reason, P&L |
+| `plan_xx/202x-202x/tables/<window>_monthly.csv` | Monthly rebalance rows (date, regime, target weights, holdings, NAV) |
+| `plan_xx/202x-202x/tables/<window>_nav.csv` | Daily NAV (portfolio vs HSI, normalized to 1,000,000) |
+| `plan_xx/202x-202x/tables/<window>_metrics.json` | Return, drawdown, Sharpe, tail loss, trade counts, costs |
+| `plan_xx/202x-202x/charts/…comparison.svg / timeline.svg / allocation.svg` | Portfolio vs HSI; trade timeline; allocation |
+| `plan_xx/202x-202x/<window>_plan.xlsx` | 3 sheets (Trades, Monthly Allocation, Metrics) |
 
-Current runner output folders: 
+* Files for plan_v2(2022-2023):
+  `plan_v2/2022-2023/tables/2022-2023_trades.csv`,
+  `plan_v2/2022-2023/tables/2022-2023_monthly.csv`,
+  `plan_v2/2022-2023/tables/2022_2023_nav.csv`,
+  `plan_v2/2022-2023/tables/2022_2023_metrics.json`,
+  `plan_v2/2022-2023/charts/2022-2023_comparison.svg /2022-2023_timeline.svg /2022-2023_allocation.svg`
+  `plan_v2/2022_2023/2022-2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_v2/2024-2026/tables/2024-2026_trades.csv`,
+  `plan_v2/2024-2026/tables/2024-2026_monthly.csv`,
+  `plan_v2/2024-2026/tables/2024-2026_nav.csv`,
+  `plan_v2/2024-2026/tables/2024-2026_metrics.json`,
+  `plan_v2/2024-2026/charts/2024-2026_comparison.svg /2024-2026_timeline.svg /2024-2026_allocation.svg`
+  `plan_v2/2024-2026/2024-2026_plan.xlsx`,
+  
+* (Risk adverse)Files for plan_ra(2022-2023):
+  `plan_ra/2022-2023/tables/2022-2023_trades.csv`,
+  `plan_ra/2022-2023/tables/2022-2023_monthly.csv`,
+  `plan_ra/2022-2023/tables/2022_2023_nav.csv`,
+  `plan_ra/2022-2023/tables/2022_2023_metrics.json`,
+  `plan_ra/2022-2023/charts/2022-2023_comparison.svg /2022-2023_timeline.svg /2022-2023_allocation.svg`
+  `plan_ra/2022_2023/2022-2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_ra/2024-2026/tables/2024-2026_trades.csv`,
+  `plan_ra/2024-2026/tables/2024-2026_monthly.csv`,
+  `plan_ra/2024-2026/tables/2024-2026_nav.csv`,
+  `plan_ra/2024-2026/tables/2024-2026_metrics.json`,
+  `plan_ra/2024-2026/charts/2024-2026_comparison.svg /2024-2026_timeline.svg /2024-2026_allocation.svg`
+  `plan_ra/2024-2026/2024-2026_plan.xlsx`,
+  
+* (Risk neutral)Files for plan_rn(2022-2023):
+  `plan_rn/2022-2023/tables/2022-2023_trades.csv`,
+  `plan_rn/2022-2023/tables/2022-2023_monthly.csv`,
+  `plan_rn/2022-2023/tables/2022_2023_nav.csv`,
+  `plan_rn/2022-2023/tables/2022_2023_metrics.json`,
+  `plan_rn/2022-2023/charts/2022-2023_comparison.svg /2022-2023_timeline.svg /2022-2023_allocation.svg`
+  `plan_rn/2022_2023/2022-2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_rn/2024-2026/tables/2024-2026_trades.csv`,
+  `plan_rn/2024-2026/tables/2024-2026_monthly.csv`,
+  `plan_rn/2024-2026/tables/2024-2026_nav.csv`,
+  `plan_rn/2024-2026/tables/2024-2026_metrics.json`,
+  `plan_rn/2024-2026/charts/2024-2026_comparison.svg /2024-2026_timeline.svg /2024-2026_allocation.svg`
+  `plan_rn/2024-2026/2024-2026_plan.xlsx`,
 
+* (Risk take)Files for plan_rt(2022-2023):
+  `plan_rt/2022-2023/tables/2022-2023_trades.csv`,
+  `plan_rt/2022-2023/tables/2022-2023_monthly.csv`,
+  `plan_rt/2022-2023/tables/2022_2023_nav.csv`,
+  `plan_rt/2022-2023/tables/2022_2023_metrics.json`,
+  `plan_rt/2022-2023/charts/2022-2023_comparison.svg /2022-2023_timeline.svg /2022-2023_allocation.svg`
+  `plan_rt/2022_2023/2022-2023_plan.xlsx`,
+  
+  and (2024-2026)
+  `plan_rt/2024-2026/tables/2024-2026_trades.csv`,
+  `plan_rt/2024-2026/tables/2024-2026_monthly.csv`,
+  `plan_rt/2024-2026/tables/2024-2026_nav.csv`,
+  `plan_rt/2024-2026/tables/2024-2026_metrics.json`,
+  `plan_rt/2024-2026/charts/2024-2026_comparison.svg /2024-2026_timeline.svg /2024-2026_allocation.svg`
+  `plan_rt/2024-2026/2024-2026_plan.xlsx`,
 
 ---
 
