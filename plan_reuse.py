@@ -1,40 +1,5 @@
 #!/usr/bin/env python3
 """plan_reuse_2023_2025.py - REUSE CASE: v3 rules applied to a NEW-CASE setup.
-
-Reusable contribution built from plan_v2_outputs.py (which is left untouched):
-the same v3 trading skill, backtest loop, cost model, and output pipeline are
-reused verbatim; only the case inputs are changed:
-  - Universe: 30 selected HK names (0001.HK ... 0868.HK)
-  - Max 8 stock holdings (MAX_STOCKS = 8)
-  - Hedge sleeve: Gold only (HEDGE_ASSETS = ("Gold",), MAX_HEDGE = 1)
-  - Window: 2023-01-03 .. 2025-12-31 (2022 acts as indicator warm-up)
-This demonstrates reuse beyond the original 2022-2023 / 2024-2026 conversation.
-
-This generator runs the window given on the command line and writes:
-  <OUT>/tables/<win>_trades.csv, _monthly.csv, _nav.csv, _metrics.json
-  <OUT>/charts/<win>_comparison.svg, _timeline.svg, _allocation.svg
-  <OUT>/<win>_plan.xlsx   (+ CSV copies next to the xlsx)
-  <OUT>/run_manifest.json  (input hashes + resolved config: fresh-run evidence)
-
-Portability fixes over the 2025-11-15 version (which only ran on one machine):
-  * no absolute paths are baked in: the six input CSVs are discovered next to
-    this script, in ./data, ./2026-11-08, ./2026-11-07/chat-1/outputs, or in any
-    of the three parent directories -- or wherever $PLAN_DATA_DIR points.
-  * every case parameter is a CLI flag, so a NEW case runs without editing code:
-      ./plan_reuse.py --start 2023-07-03 --end 2025-06-30 --max-stocks 10 \
-                      --hedges Gold,Silver --out portfolio_eval/fresh_case
-  * indicator warm-up is no longer wired to a single window: the 2021-2022 file
-    set is always loaded first as history and the 2023-2026 set is appended
-    (filtered to Date <= END), so arbitrary START/END values work.
-  * START/END are snapped to the first/last trading day actually present.
-  * the SVG escaper now really escapes (it used to be a no-op, which produced
-    invalid SVG whenever a label contained & < >).
-  * a run_manifest.json records resolved input paths + SHA-256 of each input +
-    the effective config + Python/platform, so a run is auditable.
-
-`./plan_reuse.py --help` lists every flag. The defaults reproduce the 2023-2025
-reuse case exactly (window, universe, MAX_STOCKS=8, Gold-only hedge, 0.11%/side,
--15% stop, +60% target).
 """
 import argparse, csv, hashlib, json, math, os, platform, shutil, sys, zipfile
 from datetime import datetime, timezone
