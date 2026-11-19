@@ -64,7 +64,7 @@ applied identically by every risk profile.
 | Risk-taker | `plan_rt.py` | 75 / 15 / 10 | 90 / 0 / 10 | -15% | +75% | 15 | 3 |
 | Reuse case | `plan_reuse.py` | v3 rules (2023-2025 window) | v3 rules | -15% | +60% | 10 | 2 |
 
-For the default (v3) profile implemented in `plan_v2.py`:
+For the default (v2) profile implemented in `plan_v2.py`:
 
 * Max **10 stocks**; hedge holdings capped at **2** (MAX_HEDGE = 2).
 * A stock exits on **-15% stop** → own **downtrend** (close < SMA20 & DIF < -0.1)
@@ -119,14 +119,6 @@ modeled 0.11%, dividends, taxes, corporate actions / splits, other markets.
 
 ## 3. Input files / fields, units, sources, data-access instructions
 
-Two data sets are used (uploaded by the user). Paths are relative to the folder
-that contains this README (`<project_root>/2026-11-08/chat-1/work`); they are also
-configured via the `REPO*` constants at the top of each script:
-
-```
-2021-2022 files: ../../2026-11-07/chat-1/outputs   (REPO_OLD)
-2023-2026 files: ../..                              (REPO_NEW = <project_root>/2026-11-08)
-```
 
 | File | Columns used | Units | Role |
 |---|---|---|---|
@@ -177,6 +169,7 @@ RECOMMENDED INVESTMENT ALLOCATION
 ```
 
 **2) Quick-run backtest** (default 2021–2022):
+download the csv data file. 
 
 ```
 python3 plan_v2.py
